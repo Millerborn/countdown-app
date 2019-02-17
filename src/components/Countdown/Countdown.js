@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import './countdown.css';
 import Waiting from '../Waiting/Waiting';
 import Active from '../Active/Active';
+import '../Header/ActiveHeader.css';
 
 let curDay;
 let secTime;
@@ -69,7 +70,7 @@ class Countdown extends Component {
         const { seconds } = this.state;
         let waiting = (seconds > 597000 ? <Active /> : <Waiting />)
     return (
-        <div>
+        <div id="active">
             {waiting}
         </div>
     );

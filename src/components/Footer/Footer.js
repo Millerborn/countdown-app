@@ -3,7 +3,7 @@ import './Footer.css';
 
 const Footer = () => (
   <center>
-    <footer>
+    <footer id="footer">
       &copy; Small Steps To Mindfulness
     </footer>
   </center>

@@ -1,5 +1,3 @@
-footer {
-    justify-content: center;
-    position: absolute;  
-    bottom: 0; 
+#footer {
+    background-color: #FFC04C;
 }
