@@ -31,7 +31,6 @@ class Active extends Component {
     };
 
     playClick = () => {
-        console.log('playing');
         this.state.song.play();
     }
     
