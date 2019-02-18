@@ -21,7 +21,7 @@ class Countdown extends Component {
     getSeconds = () => {
         let nowDate = new Date();
         let dy = 0 ; //Sunday through Saturday, 0 to 6
-        let counterTime = new Date(nowDate.getFullYear(),nowDate.getMonth(),nowDate.getDate(),13,56,0); //20 out of 24 hours = 8pm
+        let counterTime = new Date(nowDate.getFullYear(),nowDate.getMonth(),nowDate.getDate(),23,57,0); //20 out of 24 hours = 8pm
         
         let curtime = nowDate.getTime(); //current time
         let atime = counterTime.getTime(); //countdown time
