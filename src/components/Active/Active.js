@@ -40,7 +40,7 @@ class Active extends Component {
         <div>
             <Header /><div hidden><Waiting /></div>
             <button onClick={this.startStop}>
-                {playing ? 'Pause' : 'Start'}
+                {playing ? 'Silence' : 'Meditation Music'}
             </button>        
         </div>
     );

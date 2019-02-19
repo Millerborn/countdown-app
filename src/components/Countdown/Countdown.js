@@ -20,8 +20,8 @@ class Countdown extends Component {
 
     getSeconds = () => {
         let nowDate = new Date();
-        let dy = 0 ; //Sunday through Saturday, 0 to 6
-        let counterTime = new Date(nowDate.getFullYear(),nowDate.getMonth(),nowDate.getDate(),23,57,0); //20 out of 24 hours = 8pm
+        let dy = 2 ; //Sunday through Saturday, 0 to 6
+        let counterTime = new Date(nowDate.getFullYear(),nowDate.getMonth(),nowDate.getDate(),12,57,0); //20 out of 24 hours = 8pm
         
         let curtime = nowDate.getTime(); //current time
         let atime = counterTime.getTime(); //countdown time
@@ -52,7 +52,7 @@ class Countdown extends Component {
          this.getSeconds(); //start over
         }
         
-        let days = Math.floor(secs/86400);
+        // let days = Math.floor(secs/86400);
         secs %= 86400;
         let hours= Math.floor(secs/3600);
         secs %= 3600;
