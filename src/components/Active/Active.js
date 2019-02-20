@@ -1,7 +1,27 @@
 import React, { Component } from 'react';
-import Header from '../Header/ActiveHeader';
-import Waiting from '../Waiting/Waiting';
+import PropTypes from 'prop-types';
+import ActiveCountdown from '../Active/ActiveCountdown';
+import ActiveHeader from '../Header/ActiveHeader';
+import Button from '@material-ui/core/Button';
 import meditation from '../../sounds/meditation-music.mp3';
+import { withStyles } from '@material-ui/core/styles';
+import grey from '@material-ui/core/colors/grey';
+import VolumeOffIcon from '@material-ui/icons/VolumeOff';
+import VolumeUpIcon from '@material-ui/icons/VolumeUp';
+
+const styles = theme => ({
+    margin: {
+      margin: theme.spacing.unit,
+    },
+    cssRoot: {
+      color: theme.palette.getContrastText(grey[500]),
+      backgroundColor: grey[500],
+      '&:hover': {
+        backgroundColor: grey[700],
+      },
+    }
+  });
+
 class Active extends Component {
 
     state = {
@@ -35,16 +55,22 @@ class Active extends Component {
     }
     
     render() {
+        const { classes } = this.props;
         const { playing } = this.state;
     return (
         <div>
-            <Header /><div hidden><Waiting /></div>
-            <button onClick={this.startStop}>
-                {playing ? 'Silence' : 'Meditation Music'}
-            </button>        
+            <ActiveHeader />
+            <ActiveCountdown />      
+            <Button className={classes.cssRoot} onClick={this.startStop}>
+                {playing ? <VolumeOffIcon /> : <VolumeUpIcon />}
+            </Button>  
         </div>
     );
   }
 }
 
-export default (Active)
+Active.propTypes = {
+    classes: PropTypes.object.isRequired,
+  };
+  
+  export default withStyles(styles)(Active);

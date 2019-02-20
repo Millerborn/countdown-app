@@ -21,7 +21,7 @@ class Countdown extends Component {
     getSeconds = () => {
         let nowDate = new Date();
         let dy = 2 ; //Sunday through Saturday, 0 to 6
-        let counterTime = new Date(nowDate.getFullYear(),nowDate.getMonth(),nowDate.getDate(),12,57,0); //20 out of 24 hours = 8pm
+        let counterTime = new Date(nowDate.getFullYear(),nowDate.getMonth(),nowDate.getDate(),21,57,0); //20 out of 24 hours = 8pm
         
         let curtime = nowDate.getTime(); //current time
         let atime = counterTime.getTime(); //countdown time
@@ -64,6 +64,12 @@ class Countdown extends Component {
         document.getElementById("hours").innerHTML = ((hours < 10 ) ? "0" : "" ) + hours;
         document.getElementById("minutes").innerHTML = ( (mins < 10) ? "0" : "" ) + mins;
         document.getElementById("seconds").innerHTML = ( (secs < 10) ? "0" : "" ) + secs;
+    }
+
+    startSecondTimer = () => {
+        while(this.state.seconds > 597000) {
+
+        }
     }
 
     render() {
