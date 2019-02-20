@@ -42,7 +42,7 @@ class ActiveCountdown extends Component {
         var seconds = Math.floor((distance % (1000 * 60)) / 1000);
             
         // Output the result in an element with id="demo"
-        document.getElementById("demo").innerHTML = days + "days " + hours + "hours"
+        document.getElementById("demo").innerHTML = hours + "hours"
         + minutes + "minutes" + seconds + "seconds";
             
         // If the count down is over, write some text 
@@ -58,7 +58,6 @@ class ActiveCountdown extends Component {
         return(
             <div>
                 <div id="demo" className={classes.transparent}>
-                    <div><span className="days" id="days"></span><div className="smalltext">Days</div></div>
                     <div><span className="hours" id="hours"></span><div className="smalltext">Hours</div></div>
                     <div><span className="minutes" id="minutes"></span><div className="smalltext">Minutes</div></div>
                     <div><span className="seconds" id="seconds"></span><div className="smalltext">Seconds</div></div>
