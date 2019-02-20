@@ -23,7 +23,11 @@ class ActiveCountdown extends Component {
     countTo = () => {
         let nowDate = new Date();
         // Set the date we're counting down to
-        let countDownDate = new Date(nowDate.getFullYear(),nowDate.getMonth(),nowDate.getDate(),23,57,0); //20 out of 24 hours = 8pm
+        let countDownDate = 
+        new Date(nowDate.getFullYear(),
+        nowDate.getMonth(),
+        nowDate.getDate(),2,37,0); 
+        //20 out of 24 hours = 8pm
         console.log(countDownDate);
         
         // Update the count down every 1 second
@@ -41,9 +45,9 @@ class ActiveCountdown extends Component {
         var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
         var seconds = Math.floor((distance % (1000 * 60)) / 1000);
             
-        // Output the result in an element with id="demo"
-        document.getElementById("demo").innerHTML = hours + "hours"
-        + minutes + "minutes" + seconds + "seconds";
+        // Output the result in an element with id="demo" and hide hours and seconds
+        document.getElementById("demo").innerHTML = hours + "hours" + minutes + "minutes";
+        document.getElementById("hide").innerHTML = days + "days" + seconds + "seconds";
             
         // If the count down is over, write some text 
         if (distance < 0) {
@@ -60,6 +64,9 @@ class ActiveCountdown extends Component {
                 <div id="demo" className={classes.transparent}>
                     <div><span className="hours" id="hours"></span><div className="smalltext">Hours</div></div>
                     <div><span className="minutes" id="minutes"></span><div className="smalltext">Minutes</div></div>
+                </div>
+                <div id="hide" hidden>
+                    <div><span className="days" id="days"></span><div className="smalltext">Days</div></div>
                     <div><span className="seconds" id="seconds"></span><div className="smalltext">Seconds</div></div>
                 </div>
             </div>
