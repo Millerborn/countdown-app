@@ -19,12 +19,13 @@ class Countdown extends Component {
     }
 
     getSeconds = () => {
+
         let nowDate = new Date();
-        let dy = 1 ; //Sunday through Saturday, 0 to 6
+        let dy = 3; //Sunday through Saturday, 0 to 6
         let counterTime = 
         new Date(nowDate.getFullYear(),
         nowDate.getMonth(),
-        nowDate.getDate(),17,57,0); 
+        nowDate.getDate(),20,24,0); 
         //20 out of 24 hours = 8pm
         
         let curtime = nowDate.getTime(); //current time
@@ -63,17 +64,11 @@ class Countdown extends Component {
         let mins = Math.floor(secs/60);
         secs %= 60;
         
-        //update the time display
+        // update the time display
         document.getElementById("days").innerHTML = curDay;
         document.getElementById("hours").innerHTML = ((hours < 10 ) ? "0" : "" ) + hours;
         document.getElementById("minutes").innerHTML = ( (mins < 10) ? "0" : "" ) + mins;
         document.getElementById("seconds").innerHTML = ( (secs < 10) ? "0" : "" ) + secs;
-    }
-
-    startSecondTimer = () => {
-        while(this.state.seconds > 597000) {
-
-        }
     }
 
     render() {
