@@ -4,21 +4,22 @@ import ActiveCountdown from '../Active/ActiveCountdown';
 import ActiveHeader from '../Header/ActiveHeader';
 import Time from '../Countdown/time';
 import Button from '@material-ui/core/Button';
-import meditation from '../../sounds/meditation-music.mp3';
+import meditation from '../../sounds/om_mani_padme_hum.mp3';
 import { withStyles } from '@material-ui/core/styles';
 import grey from '@material-ui/core/colors/grey';
 import VolumeOffIcon from '@material-ui/icons/VolumeOff';
 import VolumeUpIcon from '@material-ui/icons/VolumeUp';
+import '../../App.css';
 
 const styles = theme => ({
     margin: {
       margin: theme.spacing.unit,
     },
     cssRoot: {
-      color: theme.palette.getContrastText(grey[500]),
-      backgroundColor: grey[500],
+      color: theme.palette.getContrastText(grey[300]),
+      backgroundColor: grey[300],
       '&:hover': {
-        backgroundColor: grey[700],
+        backgroundColor: grey[600],
       },
     }
   });
@@ -61,7 +62,7 @@ class Active extends Component {
     return (
         <div>
             <ActiveHeader />
-            <Button className={classes.cssRoot} onClick={this.startStop}>
+            <Button id="sound-button" className={classes.cssRoot} onClick={this.startStop}>
                 {playing ? <VolumeOffIcon /> : <VolumeUpIcon />}
             </Button>
             <Time />

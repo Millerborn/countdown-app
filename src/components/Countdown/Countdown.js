@@ -22,11 +22,11 @@ class Countdown extends Component {
 
         //Set for 6pm, Sunday
         let nowDate = new Date();
-        let dy = 0; //Sunday through Saturday, 0 to 6
+        let dy = 3; //Sunday through Saturday, 0 to 6
         let counterTime = 
         new Date(nowDate.getFullYear(),
         nowDate.getMonth(),
-        nowDate.getDate(),0,1,0); 
+        nowDate.getDate(),15,1,0); 
         
         let curtime = nowDate.getTime(); //current time
         let atime = counterTime.getTime(); //countdown time

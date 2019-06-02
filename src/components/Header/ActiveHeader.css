@@ -1,6 +1,5 @@
-/* #active {
-    background-image: url("/images/active-background.jpg");
-    height: 1000px;
-    width: 100%;
-    background-color: skyblue;
-  } */
+#headerImage {
+  opacity: 0.5;
+  border-radius: 15px;
+  padding: 10px;
+}
