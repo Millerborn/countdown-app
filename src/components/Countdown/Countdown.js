@@ -20,13 +20,13 @@ class Countdown extends Component {
 
     getSeconds = () => {
 
+        //Set for 6pm, Sunday
         let nowDate = new Date();
-        let dy = 3; //Sunday through Saturday, 0 to 6
+        let dy = 0; //Sunday through Saturday, 0 to 6
         let counterTime = 
         new Date(nowDate.getFullYear(),
         nowDate.getMonth(),
-        nowDate.getDate(),20,24,0); 
-        //20 out of 24 hours = 8pm
+        nowDate.getDate(),0,0,0); 
         
         let curtime = nowDate.getTime(); //current time
         let atime = counterTime.getTime(); //countdown time
@@ -75,11 +75,9 @@ class Countdown extends Component {
         const { seconds } = this.state;
         let waiting = (seconds > 597000 ? <Active /> : <Waiting />)
     return (
-        <div id="active">
-            {waiting}
-        </div>
+        <div id="active">{waiting}</div>
     );
   }
 }
 
-export default (Countdown)
+export default (Countdown);

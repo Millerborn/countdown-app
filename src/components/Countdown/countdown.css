@@ -7,23 +7,20 @@
   color: #fff;
   font-size: 20px;
   padding: 20px;
-  background: #265;
   border-radius: 20px;
   text-decoration: none;
 }
  
-#countholder a:hover{
+/* #countholder a:hover{
   background: #487;
-}
+} */
  
 #countholder{
  font-family: sans-serif;
- color: #fff;
  display: inline-block;
  font-weight: 100;
  text-align: center;
  font-size: 48px;
- background-color: white;
  padding:20px;
  border-radius: 6px;
  margin-bottom:30px;
@@ -33,13 +30,11 @@
  
 #countholder > div{
  padding: 4px 10px;
- background: skyblue;
  display: inline-block;
 }
  
 #countholder div > span{
  border-radius: 3px;
- background: skyblue;
  display: inline-block;
 }
  
