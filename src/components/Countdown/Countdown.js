@@ -26,7 +26,7 @@ class Countdown extends Component {
         let counterTime = 
         new Date(nowDate.getFullYear(),
         nowDate.getMonth(),
-        nowDate.getDate(),0,0,0); 
+        nowDate.getDate(),0,1,0); 
         
         let curtime = nowDate.getTime(); //current time
         let atime = counterTime.getTime(); //countdown time
