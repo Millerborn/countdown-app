@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import ActiveCountdown from '../Active/ActiveCountdown';
-import ActiveHeader from '../Header/ActiveHeader';
-import Time from '../Countdown/time';
+import About from '../About/About';
+import Header from './ActiveHeader';
+// import Time from '../Countdown/time';
 import Button from '@material-ui/core/Button';
 import meditation from '../../sounds/om_mani_padme_hum.mp3';
 import { withStyles } from '@material-ui/core/styles';
@@ -61,12 +62,13 @@ class Active extends Component {
         const { playing } = this.state;
     return (
         <div>
-            <ActiveHeader />
+            <Header />
             <Button id="sound-button" className={classes.cssRoot} onClick={this.startStop}>
                 {playing ? <VolumeOffIcon /> : <VolumeUpIcon />}
             </Button>
-            <Time />
+            {/* <Time /> */}
             <ActiveCountdown />
+            <About />
         </div>
     );
   }

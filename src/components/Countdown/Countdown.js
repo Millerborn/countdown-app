@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import './countdown.css';
 import Waiting from '../Waiting/Waiting';
 import Active from '../Active/Active';
-import '../Header/ActiveHeader.css';
 
 let curDay;
 let secTime;
@@ -22,11 +21,11 @@ class Countdown extends Component {
 
         //Set for 6pm, Sunday
         let nowDate = new Date();
-        let dy = 3; //Sunday through Saturday, 0 to 6
+        let dy = 0; //Sunday through Saturday, 0 to 6
         let counterTime = 
         new Date(nowDate.getFullYear(),
         nowDate.getMonth(),
-        nowDate.getDate(),15,1,0); 
+        nowDate.getDate(),19,1,0); 
         
         let curtime = nowDate.getTime(); //current time
         let atime = counterTime.getTime(); //countdown time
@@ -68,14 +67,14 @@ class Countdown extends Component {
         document.getElementById("days").innerHTML = curDay;
         document.getElementById("hours").innerHTML = ((hours < 10 ) ? "0" : "" ) + hours;
         document.getElementById("minutes").innerHTML = ( (mins < 10) ? "0" : "" ) + mins;
-        document.getElementById("seconds").innerHTML = ( (secs < 10) ? "0" : "" ) + secs;
+        // document.getElementById("seconds").innerHTML = ( (secs < 10) ? "0" : "" ) + secs;
     }
 
     render() {
         const { seconds } = this.state;
         let waiting = (seconds > 597000 ? <Active /> : <Waiting />)
     return (
-        <div id="active">{waiting}</div>
+        <div class="active">{waiting}</div>
     );
   }
 }

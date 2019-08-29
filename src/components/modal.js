@@ -4,7 +4,6 @@ import { withStyles } from '@material-ui/core/styles';
 import Typography from '@material-ui/core/Typography';
 import Button from '@material-ui/core/Button';
 import Popover from '@material-ui/core/Popover';
-// import Definition from './Definition';
 
 const styles = theme => ({
     button: {
@@ -15,10 +14,13 @@ const styles = theme => ({
     },
     popover: {
         height: 100,
+    },
+    smallText: {
+        fontSize: 10,
     }
 });
 
-class ActiveCountdown extends Component {
+class Modal extends Component {
     state = {
       anchorEl: null,
     };
@@ -77,9 +79,6 @@ class ActiveCountdown extends Component {
                     </Typography>
                     </Popover>
                 </div>
-                {/* <div>
-
-                </div> */}
                 <div hidden id="demo" className={classes.transparent}>
                     <div><span className="days" id="days"></span><div className="smalltext">Days</div></div>
                     <div><span className="hours" id="hours"></span><div className="smalltext">Hours</div></div>
@@ -91,8 +90,9 @@ class ActiveCountdown extends Component {
     }
 }
 
-ActiveCountdown.propTypes = {
+Modal.propTypes = {
     classes: PropTypes.object.isRequired,
   };
   
-export default withStyles(styles)(ActiveCountdown);
+export default withStyles(styles)(Modal);
+

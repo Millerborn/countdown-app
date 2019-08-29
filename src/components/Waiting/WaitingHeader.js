@@ -4,7 +4,7 @@ class Header extends Component {
   render() {
     return (
       <div>
-          <h1>Next Session In: </h1>
+          <h3>Next Session In:</h3>
       </div>
     );
   }
